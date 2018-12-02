@@ -1,4 +1,4 @@
-#Base API
+# Base API
 
 Um modelo básico de API Python Flask usado na Plataforma InCeres.
 
@@ -8,11 +8,11 @@ Tem também um módulo fabfile que usa o <a href="http://www.fabfile.org/" targe
 
 Finalmente, para você rodar o projeto em um ambiente STAG ou PROD, você precisará do <a href="https://gunicorn.org/" target="_blank">`gunicorn`</a>, um WSGI muito bom e fácil de usar para Python. O módulo `gunicorn_conf.py` tem as configurações necessárias para isso. 
 
-##Instalação
+## Instalação
 
 **Não se esqueça de trocar `base` pelo nome do seu projeto!**
 
-###VirtualEnv
+### VirtualEnv
 
 Recomendo usar um virtualenv para qualquer projeto Python. Isso vai te permitir isolar o contexto de uma API e trabalhar com diversas APIs na mesma máquina.
 
@@ -31,7 +31,7 @@ Reinicie seu terminal ou execute:
 
     $ source /usr/local/bin/virtualenvwrapper.sh
 
-###Criando a API
+### Criando a API
 
 Crie o virtualenv:
 
@@ -81,7 +81,7 @@ E atualize o banco de novo com:
 
     $ python manage.py db upgrade
 
-##Desenvolvendo
+## Desenvolvendo
 
 Nesse momento, você está pronto para começar a desenvolver. Para rodar um WebServer de desenvolvimento do Flask execute:
 
