@@ -1,0 +1,11 @@
+.idea/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.installed.cfg
+*.egg
+
+pip-log.txt
+.env
+.env.deploy
