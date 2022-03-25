@@ -6,9 +6,7 @@ import re
 from flask import request, g, Response
 from flask_restful import Resource
 
-from app import config as config_module, domain, apm
-
-config = config_module.get_config()
+from app import config, domain, apm
 
 
 def login_required(f):

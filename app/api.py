@@ -25,4 +25,4 @@ def create_api(app):
 
 def authenticate_api(token):
     from app import config
-    return token == config.get_config().API_TOKEN
+    return token == config.API_TOKEN

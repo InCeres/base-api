@@ -1,4 +1,7 @@
-import os
+
+from app import config as config_module
+
+config = config_module.get_config()
 
 
 class ClassProperty(object):

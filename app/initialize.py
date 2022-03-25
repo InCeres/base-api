@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import os
 from datetime import datetime, timedelta
 
 from flask import Flask, g, request
 from flask_sqlalchemy import SQLAlchemy
 
-from app import config as config_module, api, database, auth, apm
+from app import config, api, database, auth, apm
 
-
-config = config_module.get_config()
 
 web_app = Flask(__name__)
 web_app.config.from_object(config)
@@ -61,7 +58,3 @@ def add_token_header(response):
         response.set_cookie('baseUserName', g.user['email'], domain='inceres.com.br', expires=expire_date)
 
     return response
-
-
-def run():
-    web_app.run(host='0.0.0.0', port=int(os.environ.get('PORTA', 33366)), debug=True)

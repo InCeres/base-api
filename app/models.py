@@ -4,7 +4,7 @@ from sqlalchemy import exc, text, or_, and_
 
 from app import database, config as config_module, ClassProperty
 
-config = config_module.get_config()
+
 db = database.AppRepository.db
 
 

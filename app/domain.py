@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-import os
+
 from datetime import timedelta, datetime
 
 import jwt
 from passlib.apps import custom_app_context
 
-from app import config as config_module, apm
+from app import config
 from app import models, services
-
-config = config_module.get_config()
 
 
 class Entity(object):

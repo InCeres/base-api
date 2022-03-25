@@ -89,6 +89,10 @@ Nesse momento, você está pronto para começar a desenvolver. Para rodar um Web
 
 Nesse modo, toda vez que você editar qualquer módulo Python dentro do projeto, o Flask reinicia o WebServer para garantir que o código novo seja usado.
 
+Para testar, abra a url abaixo no seu navegador:
+
+http://0.0.0.0:33366/api/healthcheck
+
 Provavelmente, eu esqueci alguma coisa, mas se não, você está pronto! Se eu esqueci, você vai perceber porque vai dar erro e aí você não estará pronto!
 
 Lembre-se, Python é uma viagem sem volta. Antes de iniciar, tenha certeza de que não está deixando nada para trás! Mas se for o NodeJS _(credo)_ siga em frente e mesmo que ele chore de joelhos implorando, não olhe pra trás. Você vai ser mais feliz sem ele!

@@ -33,14 +33,21 @@ class Config(object):
         self.PUSHER_SECRET = os.environ['PUSHER_SECRET']
         self.PUSHER_CLUSTER = os.environ['PUSHER_CLUSTER']
 
-        self.ELASTIC_APM = {
-            'SERVICE_NAME': 'base',
-            'SECRET_TOKEN': os.environ['APM_SECRET_TOKEN'],
-            'SERVER_URL': os.environ['APM_SERVER_URL'],
-            'ENVIRONMENT': self.AMBIENTE,
-            'DEBUG': self.DEBUG,
-            'CAPTURE_BODY': 'errors'
-        }
+        self.HOLLYDAY_TOKEN = os.environ['HOLLYDAY_TOKEN']
+
+        self.FAKE_APM = True
+
+        apm_server_url = os.environ.get('APM_SERVER_URL')
+        if apm_server_url is not None:
+            self.FAKE_APM = os.environ.get('FAKE_APM', 'False') == 'True'
+            self.ELASTIC_APM = {
+                'SERVICE_NAME': 'base',
+                'SECRET_TOKEN': os.environ.get('APM_SECRET_TOKEN'),
+                'SERVER_URL': apm_server_url,
+                'ENVIRONMENT': self.AMBIENTE,
+                'DEBUG': self.DEBUG,
+                'CAPTURE_BODY': 'errors'
+            }
 
 
 class ProductionConfig(Config):

@@ -7,9 +7,7 @@ import requests
 import pusher
 from lxml import etree
 
-from app import config as config_module, ClassProperty
-
-config = config_module.get_config()
+from app import config, ClassProperty
 
 
 class Service(object):
