@@ -33,8 +33,6 @@ class Config(object):
         self.PUSHER_SECRET = os.environ['PUSHER_SECRET']
         self.PUSHER_CLUSTER = os.environ['PUSHER_CLUSTER']
 
-        self.HOLLYDAY_TOKEN = os.environ['HOLLYDAY_TOKEN']
-
         self.ELASTIC_APM = {
             'SERVICE_NAME': 'base',
             'SECRET_TOKEN': os.environ['APM_SECRET_TOKEN'],

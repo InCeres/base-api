@@ -71,23 +71,21 @@ Se você está instalando um projeto já existente, vai precisar rodar as migrat
 
 Se você está iniciando um projeto novo, vai precisar iniciar o Alembic para poder criar migrations:
 
-    $ python manage.py db init
+    $ flask db init
 
 Toda vez que você criar um Model novo ou atualizar um Model existente, crie a migration:
 
-    $ python manage.py db migrate
+    $ flask db migrate
 
 E atualize o banco de novo com:
 
-    $ python manage.py db upgrade
+    $ flask db upgrade
 
 ## Desenvolvendo
 
 Nesse momento, você está pronto para começar a desenvolver. Para rodar um WebServer de desenvolvimento do Flask execute:
 
-    $ python run.py
-
-O módulo `run.py` fica na raiz do projeto e está alí para facilitar, pois você precisa dar `import initialize` antes de usar a API, pois é no initialize que todas as ações de infra estão concentradas.
+    $ flask run
 
 Nesse modo, toda vez que você editar qualquer módulo Python dentro do projeto, o Flask reinicia o WebServer para garantir que o código novo seja usado.
 
